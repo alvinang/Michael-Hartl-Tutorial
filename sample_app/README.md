@@ -8,13 +8,7 @@ by [Michael Hartl](http://michaelhartl.com/).
 
 ### Undoing things (Box 3.2)
 
-
-#### Controllers
-
-```irb
-rails generate controller Foo bar:string baz:integer
-rails destroy controller Foo
-```
+#### Route
 
 ```ruby
 get 'static_pages/about'
@@ -23,6 +17,13 @@ get 'static_pages/about'
 
 ``` ruby
 match '/about', to: 'static_pages#about',  via: 'get'
+```
+
+#### Controllers
+
+```irb
+rails generate controller Foo bar:string baz:integer
+rails destroy controller Foo
 ```
 
 #### Database

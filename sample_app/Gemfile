@@ -3,7 +3,7 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.0'
 gem 'bootstrap-sass', '~> 2.3.2.1'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # one of rspec-rails dependency is rspec
 group :development, :test do

@@ -14,6 +14,8 @@ describe User do
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
+  it { should respond_to(:remember_token) }
+  it { should respond_to(:authenticate) }
 
   it { should be_valid }
 
@@ -44,7 +46,7 @@ describe User do
 
   describe "when email format is valid" do
     it "should be valid" do
-      addresses = %w[user@foo.COM A_US-ER@f.b.org first.1st@foo.jp a+b@baz.cn]
+      addresses = %w[user@foo.COM A_US-ER@fb.org first.1st@foo.jp a+b@baz.cn]
       addresses.each do |valid_address|
         @user.email = valid_address
         expect(@user).to be_valid
@@ -105,6 +107,11 @@ describe User do
       it { should_not eq user_for_invalid_password }
       specify { expect(user_for_invalid_password).to be_false }
     end
+  end
+
+  describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
   end
 
 end

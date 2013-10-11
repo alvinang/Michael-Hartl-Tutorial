@@ -79,3 +79,9 @@ rake test:prepare
 ### SSL
 
 To deploy with SSL, check out section 7.4.4
+
+
+### Tips
+
+* flash.now[:error] vs flash, flash.now is specifically for render (see Listing 8.12)
+* by default, all helpers are available in views, but not controllers

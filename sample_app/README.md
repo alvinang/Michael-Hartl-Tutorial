@@ -85,3 +85,4 @@ To deploy with SSL, check out section 7.4.4
 
 * flash.now[:error] vs flash, flash.now is specifically for render (see Listing 8.12)
 * by default, all helpers are available in views, but not controllers
+* http_basic_authenticate_with to place user/pass on site [Authentication in Rails](http://railscasts.com/episodes/270-authentication-in-rails-3-1)

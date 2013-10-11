@@ -74,3 +74,8 @@ rake test:prepare
 * Command-Shift-R: single test (if in it or describe block)
 * Command-Shift-E: run the last test(s)
 * Command-Shift-T: run all test in current file
+
+
+### SSL
+
+To deploy with SSL, check out section 7.4.4
